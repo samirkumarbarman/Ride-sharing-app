@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import RideBooking from "./pages/RideBooking";
-import Profile from "./pages/Profile";
-import AppRoutes from "./routes/Approutes";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import RideBooking from "./pages/RideBooking.jsx";
+import Profile from "./pages/Profile.jsx";
+import AppRoutes from "./routes/Approutes.jsx";
 
 function App() {
   return (
-    <Router>
+    <div>
       <Navbar />
       <AppRoutes />
       <Routes>
@@ -15,8 +15,8 @@ function App() {
         <Route path="/book-ride" element={<RideBooking />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
+    </div>
   );
-}
+};
 
 export default App;

@@ -1,15 +1,15 @@
-// filepath: /workspaces/Ride-sharing-app/Frontend/src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
-import './styles/styles.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Router>
+const Index = () => {
+  return (
+    <React.StrictMode>
+    <BrowserRouter>
       <App />
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    </BrowserRouter>
+    </React.StrictMode>
+  );
+};
+
+export default Index;
